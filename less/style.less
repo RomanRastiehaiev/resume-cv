@@ -1,0 +1,484 @@
+/*---------------------------  Less variables  -----------------------------*/
+
+@backgroundColor: #eee;
+@wrapperWidth: 1000px;
+
+@leftContentBlockWidth: 40%;
+@rightContentBlock: 100% - @leftContentBlockWidth - 1%;
+
+@highlightColor: #3c3;
+@hoverHighlightColor: #0c0;
+
+@hobbyItemBackgroundColor: #9cf;
+
+@ultraLightTextColor: #eee;
+@lightTextColor: #a9a9a9;
+@darkTextColor: #363636;
+
+@phoneIconCode: "\f095";
+@mailIconCode: "\f0e0";
+@skypeIconCode: "\f17e";
+@twitterIconCode: "\f081";
+@facebookIconCode: "\f09a";
+@heartIconCode: "\f004";
+
+/*---------------------------  Common styles  -----------------------------*/
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open-sans/OpenSans-ExtraBold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open-sans/OpenSans-Regular.ttf');
+  font-weight: normal;
+}
+
+body {
+  background-color: @backgroundColor;
+  margin: 0;
+}
+
+#wrapper {
+  margin: 80px auto 0;
+  width: @wrapperWidth;
+  color: @darkTextColor;
+  background-color: #fff;
+  padding: 0 8px;
+  border: 10px solid @ultraLightTextColor;
+  border-top: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 700px) {
+  #wrapper {
+    width: auto;
+  }
+
+  .left-content-block, .right-content-block {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .left-content-block {
+    width: @leftContentBlockWidth;
+  }
+
+  .right-content-block {
+    width: @rightContentBlock;
+  }
+}
+
+/*---------------------------  Header  -----------------------------*/
+
+#photo-frame {
+  width: 160px;
+  height: 160px;
+  top: -80px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-border-radius: 50% 50%;
+  -moz-border-radius: 50% 50%;
+  border-radius: 50% 50%;
+  border: 6px solid @ultraLightTextColor;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: block;
+  z-index: 1;
+}
+
+#welcome-section {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  margin: -65px 0 20px 0;
+}
+
+.main-welcome-message {
+  font-size: 28px;
+}
+
+.regular-welcome-message {
+  font-size: 22px;
+}
+
+.name-highlight {
+  color: @highlightColor;
+}
+
+.years-old-highlight {
+  color: @lightTextColor;
+  bottom: 2px;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  color: @backgroundColor;
+  background-image: linear-gradient(to right, rgba(168, 168, 168, 0), rgba(168, 168, 168, 0.75), rgba(168, 168, 168, 0));
+}
+
+/*---------------------------  Main  -----------------------------*/
+
+main {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.content-block {
+  padding: 20px 15px 0 10px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.info-article {
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.article-header {
+  color: @highlightColor;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.article-header:before {
+  content: '// ';
+}
+
+.plain-text {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.description-header {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+a.description-header {
+  color: @darkTextColor;
+  text-decoration: none;
+}
+
+a.description-header:hover {
+  text-decoration: underline;
+}
+
+.sub-paragraph {
+  margin-bottom: 4px;
+}
+
+/*---------------------------  Education  -----------------------------*/
+
+#education-timeline {
+  position: relative;
+  overflow: hidden;
+}
+
+@educationTimeLineLeft: 7%;
+#education-timeline:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, @highlightColor 15%, @highlightColor 50%, @highlightColor 85%, @highlightColor 85%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(15%,@highlightColor), color-stop(50%,@highlightColor), color-stop(85%,@highlightColor), color-stop(85%,@highlightColor), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #ffffff 0%,@highlightColor 15%,@highlightColor 50%,@highlightColor 85%,@highlightColor 85%, #ffffff 100%);
+  background: -o-linear-gradient(top, #ffffff 0%,@highlightColor 15%,@highlightColor 50%,@highlightColor 85%,@highlightColor 85%, #ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%,@highlightColor 15%,@highlightColor 50%,@highlightColor 85%,@highlightColor 85%, #ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%,@highlightColor 15%,@highlightColor 50%,@highlightColor 85%,@highlightColor 85%, #ffffff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
+
+  left: @educationTimeLineLeft;
+}
+
+#education-timeline ul {
+  margin: 10px 0;
+}
+
+#education-timeline ul li {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#education-timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+@timeLineWidth: (@educationTimeLineLeft + 1%) * 2;
+.timeline-period {
+  margin-top: 14px;
+  position: relative;
+  float: left;
+  display: block;
+  width: @timeLineWidth;
+  text-align: center;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.period-description {
+  position: relative;
+  float: right;
+  background-color: @backgroundColor;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  width: 100% - @timeLineWidth - 1%;
+}
+
+.period-description:before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: @backgroundColor;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 24px;
+  left: -6px;
+}
+
+.period-description-wrapper {
+  margin: 10px 15px 15px 10px;
+}
+
+/*------------------------  Experience Info  ------------------------*/
+
+#experience-info li {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+#experience-info li:last-child {
+  margin-bottom: 0;
+}
+
+@experienceItemWidth: 30%;
+.experience-item {
+  width: @experienceItemWidth;
+  float: left;
+}
+
+.experience-description {
+  width: 100% - @experienceItemWidth - 1%;
+  float: right;
+}
+
+.work-place {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.work-period {
+  font-size: 12px;
+  color: @lightTextColor;
+}
+
+/*------------------------  Contact Info  ------------------------*/
+
+#contact-info li {
+  clear: both;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#contact-info li h4, #contact-info li a.contact-link {
+  font-size: 12px;
+  font-weight: normal;
+  color: @lightTextColor;
+  text-decoration: none;
+}
+
+#contact-info li a.contact-link:hover {
+  text-decoration: underline;
+}
+
+#contact-info li:before {
+  float: left;
+  font-family: FontAwesome, serif;
+  border-right: 1px solid @ultraLightTextColor;
+  border-bottom: 1px solid @ultraLightTextColor;
+  font-size: 20px;
+  color: @lightTextColor;
+  padding: 5px 8px;
+  width: 20px;
+  margin-right: 8px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+}
+
+#contact-info li:last-child:before {
+  border-bottom: none;
+}
+
+#contact-info li.phone-icon:before {
+  content: @phoneIconCode;
+}
+
+#contact-info li.mail-icon:before {
+  content: @mailIconCode;
+}
+
+#contact-info li.skype-icon:before {
+  content: @skypeIconCode;
+}
+
+#contact-info li.twitter-icon:before {
+  content: @twitterIconCode;
+}
+
+#contact-info li.facebook-icon:before {
+  content: @facebookIconCode;
+}
+
+/*------------------------  Skills  ------------------------*/
+
+#skills-list li {
+  padding: 5px 8px;
+  background-color: @highlightColor;
+  font-size: 10px;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+#skills-list li:last-child {
+  margin-bottom: 0;
+}
+
+@skillsScaleLineWidth: 3px;
+#skills-scale {
+  margin-top: 20px;
+  border-top: @skillsScaleLineWidth solid @lightTextColor;
+}
+
+#skills-scale li {
+  position: relative;
+  box-sizing: border-box;
+  font-size: 10px;
+  color: @lightTextColor;
+  padding-top: 5px;
+}
+
+@skillsScalePaddingValue: 10px;
+#skills-scale li.beginner {
+  padding-left: 0;
+  padding-right: @skillsScalePaddingValue;
+  float: left;
+  width: 15%;
+  text-align: left;
+}
+
+#skills-scale li.proficient, #skills-scale li.expert {
+  padding-left: @skillsScalePaddingValue;
+  padding-right: @skillsScalePaddingValue;
+  width: 25%;
+  text-align: center;
+}
+
+#skills-scale li.master {
+  padding-left: @skillsScalePaddingValue;
+  padding-right: 0;
+  float: right;
+  width: 15%;
+  text-align: right;
+}
+
+#skills-scale li.proficient {
+  float: left;
+}
+
+#skills-scale li.expert {
+  float: right;
+}
+
+@skillsDashHeight: 10px;
+.skills-dash:before {
+  content: '';
+  border-left: @skillsScaleLineWidth solid @lightTextColor;
+  height: @skillsDashHeight;
+  position: absolute;
+  top: -@skillsDashHeight;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.left-skills-dash:before {
+  left: 0;
+}
+
+.center-skills-dash:before {
+  left: 50%;
+}
+
+.right-skills-dash:before {
+  right: 0;
+}
+
+/*------------------------  Languages  ------------------------*/
+
+#languages-list li {
+  padding: 8px 15px 8px 0;
+  border-bottom: 1px solid @ultraLightTextColor;
+  font-size: 11px;
+}
+
+.stars-container {
+  width: 110px;
+  float: right;
+  height: 14px;
+  background: url("../images/star-grey.png") repeat-x;
+  padding: 0;
+}
+
+.stars {
+  background: url("../images/star-red.png") repeat-x;
+  height: 14px;
+  display: block;
+}
+
+/*------------------------  Hobbies  ------------------------*/
+
+#hobbies-list li {
+  float: left;
+  background-color: @hobbyItemBackgroundColor;
+  color: #fff;
+  padding: 5px 8px;
+  font-size: 9px;
+  margin: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+#hobbies-list li:hover {
+  background-color: darken(@hobbyItemBackgroundColor, 20%);
+}
+
+#hobbies-list li span.with-heart:before {
+  font-family: FontAwesome, serif;
+  content: @heartIconCode;
+  margin-right: 3px;
+}

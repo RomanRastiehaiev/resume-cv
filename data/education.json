@@ -1,0 +1,49 @@
+{
+  "education": [
+    {
+      "date": 1993,
+      "title": "I was born in Severodonetsk",
+      "someText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "date": 1999,
+      "title": "Secondary school #14",
+      "someText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "date": 2010,
+      "title": "First level graduation in KHaI",
+      "someText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "date": 2014,
+      "title": "Second level graduation in KHaI",
+      "someText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      "date": 2015,
+      "title": "Test Title 1",
+      "someText": "Already loaded data"
+    },
+    {
+      "date": 2015,
+      "title": "Test Title 2",
+      "someText": "Already loaded data"
+    },
+    {
+      "date": 2015,
+      "title": "Test Title 3",
+      "someText": "Already loaded data"
+    },
+    {
+      "date": 2015,
+      "title": "Test Title 4",
+      "someText": "Already loaded data"
+    },
+    {
+      "date": 2015,
+      "title": "Test Title 5",
+      "someText": "Already loaded data"
+    }
+  ]
+}

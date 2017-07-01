@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+    <title>Roman Rastiehaiev | Resume</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"/>
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="photo-frame">
+            <img src="images/photo.png" title="User avatar" alt="User avatar">
+        </div>
+
+        <section id="welcome-section">
+            <h1 class="main-welcome-message">Hello,</h1><br/>
+
+            <h2 class="regular-welcome-message">
+                My name is <span class="name-highlight">Roman Rastiehaiev</span><sup
+                    class="years-old-highlight">21yo</sup> and this is my resume/cv
+            </h2>
+        </section>
+    </header>
+    <hr>
+    <main>
+        <aside class="content-block left-content-block">
+
+            <article class="info-article">
+                <h2 class="article-header" title="Drag item wherever you want">About me</h2>
+                <h4 class="plain-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur.
+                </h4>
+            </article>
+
+            <article class="info-article">
+                <h2 class="article-header" title="Drag item wherever you want">Education</h2>
+
+                <div class="spinner">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                </div>
+
+                <div id="education-timeline" class="light">
+                    <!-- Here is the place where data will be loaded from Firebase -->
+                    <ul id='education-list'></ul>
+                </div>
+            </article>
+
+            <article class="info-article">
+                <h2 class="article-header" title="Drag item wherever you want">Experiences</h2>
+                <ul id="experience-info">
+                    <li>
+                        <div class="experience-item">
+                            <p class="work-place">EPAM Systems</p>
+                            <time class="work-period">2014</time>
+                        </div>
+                        <div class="experience-description">
+                            <p class="description-header sub-paragraph">Junior Software Engineer</p>
+                            <h4 class="plain-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.
+                            </h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="experience-item">
+                            <p class="work-place">EPAM Systems</p>
+                            <time class="work-period">2014</time>
+                        </div>
+                        <div class="experience-description">
+                            <p class="description-header sub-paragraph">Junior Software Engineer</p>
+                            <h4 class="plain-text">
+                                Duplicate experience item to ensure the styles are correct for this box.
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+
+        </aside>
+
+        <aside class="content-block right-content-block">
+
+            <article class="info-article">
+                <h2 class="article-header" title="Drag item wherever you want">Contact</h2>
+                <ul id="contact-info">
+
+                    <li class="phone-icon">
+                        <a href="tel:+380934061838" class="description-header">093 40 61 838</a>
+                    </li>
+                    <li class="mail-icon">
+                        <a href="mailto:Roman_Rastiehaiev@epam.com" class="description-header">Roman_Rastiehaiev@epam.com</a>
+                    </li>
+                    <li class="twitter-icon">
+                        <p class="description-header">Twitter</p>
+                        <h4>none</h4>
+                    </li>
+                    <li class="facebook-icon">
+                        <p class="description-header">Facebook</p>
+                        <a href="https://www.facebook.com" class="contact-link">www.facebook.com</a>
+                    </li>
+                    <li class="skype-icon">
+                        <p class="description-header">Skype</p>
+                        <a href="skype:romarostik?call" class="contact-link">romarostik</a>
+                    </li>
+
+                </ul>
+            </article>
+
+            <article id="skills-article" class="info-article">
+                <div id="skills-list-header">
+                    <h2 class="article-header skills-list-article-header" title="Drag item wherever you want">
+                        Skills</h2>
+                    <a class="skills-article-button open-edit-skills-article-button" href="#">Open edit</a>
+                </div>
+                <form id='add-skills-form'>
+                    <div class="skills-form-separator">
+                        <label for="skill-name-input" class='add-skills-form-label'>Skill name</label>
+                        <input type='text' id='skill-name-input' name='skill-name'/>
+                    </div>
+                    <div class="skills-form-separator">
+                        <label for="skill-percentage-input" class='add-skills-form-label'>Skill percentage</label>
+                        <input type='text' id='skill-percentage-input' class='ui-tooltip' name='skill-percentage'/>
+                    </div>
+                    <input type='submit' class='skills-article-button' value='Add new skill'/>
+                </form>
+                <ul id="skills-list">
+                    <li data-percentage="90" title="90%">Java</li>
+                    <li data-percentage="80" title="80%">HTML</li>
+                    <li data-percentage="80" title="80%">CSS</li>
+                    <li data-percentage="50" title="50%">JQuery</li>
+                    <li data-percentage="20" title="20%">PHP</li>
+                </ul>
+                <ul id="skills-scale">
+                    <li class="beginner skills-dash left-skills-dash">Beginner</li>
+                    <li class="proficient skills-dash center-skills-dash">Proficient</li>
+                    <li class="master skills-dash right-skills-dash">Master</li>
+                    <li class="expert skills-dash center-skills-dash">Expert</li>
+                </ul>
+            </article>
+
+            <article class="info-article">
+                <h2 class="article-header" title="Drag item wherever you want">Languages</h2>
+                <ul id="languages-list">
+                    <li>
+                        <span>Ukrainian</span>
+
+                        <div class="stars-container">
+                            <span class="stars" style="width: 86%;"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Russian</span>
+
+                        <div class="stars-container">
+                            <span class="stars" style="width: 95%;"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>English</span>
+
+                        <div class="stars-container">
+                            <span class="stars" style="width: 42%;"></span>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="info-article">
+                <h2 class="article-header" title="Drag item wherever you want">Hobbies</h2>
+                <ul id="hobbies-list">
+                    <li>
+                        <span class="with-heart">Playing guitar</span>
+                    </li>
+                    <li>
+                        <span class="with-heart">Programming</span>
+                    </li>
+                    <li>
+                        <span class="with-heart">Cooking</span>
+                    </li>
+                    <li>
+                        <span class="with-heart">Singing</span>
+                    </li>
+                </ul>
+            </article>
+
+        </aside>
+    </main>
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/firebase.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
